@@ -86,6 +86,7 @@ task('build', ['clean', 'hint', 'update-version'], function () {
         
         console.log("building " + commitId);
 
+		packager.generate("desktop",commitId);
         packager.generate("windows8",commitId);
         packager.generate("blackberry",commitId);
         packager.generate("ios",commitId);
